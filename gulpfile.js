@@ -35,7 +35,7 @@ gulp.task('resetANDflash' , [ 'ren' , 'all' ] );
 
 /// short-hand methods
 gulp.task("all" , [ 'js' , 'scss' , 'sftLib' ]);
-gulp.task('build' , ['clean' , 'all' , 'zip']);
+gulp.task('build' , [ 'all' , 'zip']);
 gulp.task('ren' , ['setPluginName' , 'delWPPlug' ]);
 
 
@@ -116,8 +116,8 @@ gulp.task('zip', () => {
 // gulp.task( 'build' , );
 gulp.task('clean', function(){
     return del( [
-        dirLs.bin,
-        dirLs.lib
+        dirLs.bin + '/**/*',
+        dirLs.lib + '/**/*'
     ] , {force:true});
 });
 gulp.task('setPluginName' , ()=>{
