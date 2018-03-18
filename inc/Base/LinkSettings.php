@@ -17,7 +17,7 @@ class LinkSettings extends BaseController
     public function settings_link( $links ) // $link will be provided by wordpess
     {
         # code...
-        $newlink = '<a href="admin.php?page=wo"> Dashbord </a>' ;
+        $newlink = '<a href="admin.php?page=ins_wp_plug"> Dashbord </a>' ;
         array_push( $links , $newlink );
 
         return $links ;

@@ -16,7 +16,10 @@ class BaseController
         return [
             'NAME' => $parts [ count($parts) - 2 ],
             'URL'=> $plugin_url ,
-            'PATH'=> plugin_dir_path( dirname( __FILE__ , 2)),
+            /*used in 
+               pages/Admin.php
+            */'PATH'=> plugin_dir_path( dirname( __FILE__ , 2)),
+
             'SLUG'=> 'ins_wp_plug',
             'BASENAME'=> INS_PLUGIN_BASENAME ,
             'CSS_FILE' => 'wt_style',
