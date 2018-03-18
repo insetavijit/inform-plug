@@ -20,7 +20,7 @@ class BaseController
                pages/Admin.php
             */'PATH'=> plugin_dir_path( dirname( __FILE__ , 2)),
 
-            'SLUG'=> 'ins_wp_plug',
+            'MAINSLUG'=> 'ins_wp_plug',
             'BASENAME'=> INS_PLUGIN_BASENAME ,
             'CSS_FILE' => 'wt_style',
             'JS_FILE' => 'wt_script'
