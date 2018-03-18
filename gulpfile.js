@@ -20,7 +20,8 @@ var
         'js'        : 'asset/js/**/**.js',
         'typings'   : 'typings',
         'lib'       : 'lib',
-        'bin'       : 'bin'
+        'bin'       : 'bin',
+        'curr'      : __dirname.split('/').slice(-1) 
     }
 ;
 
@@ -30,10 +31,13 @@ gulp.task('tst' , function(){
 /// short-hand methods
 gulp.task("all" , [ 'js' , 'scss' , 'sftLib' ]);
 gulp.task('build' , ['clean' , 'all' , 'zip']);
+gulp.task('ren' , ['setPluginName' , 'delWPPlug' ]);
 
 gulp.task("all-w" , [ 'js-w' , 'scss-w' ]);
 gulp.task("scss-w" , ['scss'] , function(){ gulp.watch( dirLs.scss , ['scss'] ); });
 gulp.task("js-w" , ['js'] , function(){ gulp.watch( dirLs.js , ['js'] ); });
+
+
 
 
 ///> scss 
@@ -99,12 +103,18 @@ gulp.task('zip', () => {
     .pipe(gulp.dest( dirLs.bin ))
 
 });
-
-///> build 
 // gulp.task( 'build' , );
 gulp.task('clean', function(){
     return del( [
         dirLs.bin,
         dirLs.lib
     ] , {force:true});
+});
+gulp.task('setPluginName' , ()=>{
+    gulp.src('wt-plug.php')
+    .pipe(rename(dirLs.curr + '.php'))
+    .pipe(gulp.dest('.'))
+});
+gulp.task('delWPPlug' , ()=>{
+    return del(['wt-plug.php']);
 });
