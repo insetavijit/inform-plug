@@ -1,0 +1,29 @@
+{
+  "name": "wp-plug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insetavijit/wt-plug.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/insetavijit/wt-plug/issues"
+  },
+  "homepage": "https://github.com/insetavijit/wt-plug#readme",
+
+  "devDependencies": {
+    "ansi-colors": "^1.1.0",
+    "fancy-log": "^1.3.2",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-zip": "^4.1.0"
+  }
+}
