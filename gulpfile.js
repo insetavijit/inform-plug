@@ -12,6 +12,7 @@ var
     zip     = require('gulp-zip'),
     uglify  = require('gulp-uglify'),
     rename  = require('gulp-rename'),
+    del  = require('del'),
     pkg = require('./package.json')
     
     dirLs = {
@@ -27,7 +28,9 @@ gulp.task('tst' , function(){
     log(colors.green( '[ ✓ ]') );
 });
 /// short-hand methods
-gulp.task("all" , [ 'js' , 'scss' , 'sftLib' , 'zip']);
+gulp.task("all" , [ 'js' , 'scss' , 'sftLib' ]);
+gulp.task('build' , ['clean' , 'all' , 'zip']);
+
 gulp.task("all-w" , [ 'js-w' , 'scss-w' ]);
 gulp.task("scss-w" , ['scss'] , function(){ gulp.watch( dirLs.scss , ['scss'] ); });
 gulp.task("js-w" , ['js'] , function(){ gulp.watch( dirLs.js , ['js'] ); });
@@ -95,4 +98,13 @@ gulp.task('zip', () => {
         })
     .pipe(gulp.dest( dirLs.bin ))
 
+});
+
+///> build 
+// gulp.task( 'build' , );
+gulp.task('clean', function(){
+    return del( [
+        dirLs.bin,
+        dirLs.lib
+    ] , {force:true});
 });
