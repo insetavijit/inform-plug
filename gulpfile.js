@@ -98,6 +98,10 @@ gulp.task('zip', () => {
         '!**.js',
         '!**.md',
         '!**.log',
+        'inc**/*',
+        'templates**/*',
+        'lib**/*',
+        'doc**/*'
     ])
     .pipe(zip(pkg.name + '-publish-' + today +'.zip' ))
         .on('end' , function(){
