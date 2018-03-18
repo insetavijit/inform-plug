@@ -3,13 +3,15 @@
 ||
 \*/
 var 
-    gulp = require("gulp"),
-    colors = require("ansi-colors"),
-    log = require('fancy-log'),
-    sass = require('gulp-sass'),
+    gulp    = require("gulp"),
+    colors  = require("ansi-colors"),
+    log     = require('fancy-log'),
+    sass    = require('gulp-sass'),
     sourceMaps = require("gulp-sourcemaps"),
     plumber = require('gulp-plumber'),
-    zip = require('gulp-zip'),
+    zip     = require('gulp-zip'),
+    uglify  = require('gulp-uglify'),
+    rename  = require('gulp-rename'),
     pkg = require('./package.json')
     
     dirLs = {
@@ -37,15 +39,22 @@ gulp.task('scss', function() {
     .pipe(plumber())
     .pipe(sourceMaps.init())
     .pipe(sass({outputStyle: 'compressed'}))
+    .pipe( rename({
+        suffix :".min"
+    }))
     .pipe(sourceMaps.write("./map"))
     .pipe(gulp.dest( dirLs.lib ))
 });
 ///> typesctip compiling 
 gulp.task('js', function() {
-    gulp.src()
+    gulp.src( dirLs.js )
     .pipe( plumber() )
     .pipe( sourceMaps.init() )
-    .pipe(  )
+    .pipe( uglify() )
+    .pipe( rename({
+        suffix :".min"
+    }))
+    .pipe(sourceMaps.write("./map"))    
     .pipe(gulp.dest( dirLs.lib ))
     
 });
