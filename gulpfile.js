@@ -76,8 +76,8 @@ gulp.task('js', function() {
 gulp.task('sftLib', function() {
     gulp.src([//just un comment all to use them !!!
         //> fremworks :
-        './node_modules/bootstrap/lib/css/bootstrap.min.css',
-        './node_modules/bootstrap/lib/js/bootstrap.min.js',
+        './node_modules/bootstrap/dist/css/bootstrap.min.css',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
         //> icon - pack 
         './node_modules/font-awesome**/**',
         //>js libs
