@@ -1,0 +1,17 @@
+{
+    "name": "root/wt-plug",
+    "description": "A simple Clean minimalistc mordern wordpress plugin devlopment workfollow - seed",
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "avijit sarkar",
+            "email": "avisofficeone@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}
