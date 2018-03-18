@@ -1,27 +1,51 @@
 <?php
 
 namespace Inc\Pages ;
+
 use Inc\Base\BaseController ;
+use Inc\Settings\SettingsApi ;
 
 class Admin extends BaseController
 {
+    public $subpages ;
+    public $pageSetting;
     public function register()
     {
-        add_action( 'admin_menu',   array($this , 'add_admin_page') );
+        
+
+        $this->setPage(); 
+        $this->subpages(); 
+
+        $settings = new SettingsApi();
+        $settings->addPages($this->pageSetting )->withSubpage( 'Dashbord' )->addSubPages( $this->subpages )->register();
     }
-    public function add_admin_page( )
+    public function subpages()
     {
-        add_menu_page( 
-            'wp_plug' ,// $page_title:string, 
-            'wp_plug' ,// $menu_title:string, 
-            'manage_options' ,// $capability:string, 
-            $this->plug_info()['MAINSLUG']  ,// $menu_slug:string, 
-            array( $this ,'admin_index' ) ,// $function:callable, 
-            'dashicons-store' // $icon_url:string,
+        $this->subpages = array(
+            array
+            (
+                'parent_slug' => 'wt_plug_main', 
+                'page_title' => 'Trash', 
+                'menu_title' => 'trash', 
+                'capability' => 'manage_options', 
+                'menu_slug' => 'wt_plug_main_trash', 
+                'callback' => ''
+            ),
         );
     }
-    public function admin_index()
+    public function setPage()
     {
-        require_once ( $this->plug_info()['PATH'] . '/templates/WellcomePage.php') ;
+        $this->pageSetting = array(
+            array
+            (
+                'page_title'=> 'dashbord', 
+                'menu_title'=> 'wt-seed', 
+                'capability'=> 'manage_options', 
+                'menu_slug' => 'wt_plug_main',
+                'callback'  => '',
+                'icon_url'  => ''
+            )
+        );
+        return $this ;
     }
 }
