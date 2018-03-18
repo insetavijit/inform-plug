@@ -28,10 +28,16 @@ var
 gulp.task('tst' , function(){
     log(colors.green( '[ ✓ ]') );
 });
+/************
+ * postInstall . setup project 
+************/
+gulp.task('resetANDflash' , [ 'ren' , 'all' ] );
+
 /// short-hand methods
 gulp.task("all" , [ 'js' , 'scss' , 'sftLib' ]);
 gulp.task('build' , ['clean' , 'all' , 'zip']);
 gulp.task('ren' , ['setPluginName' , 'delWPPlug' ]);
+
 
 gulp.task("all-w" , [ 'js-w' , 'scss-w' ]);
 gulp.task("scss-w" , ['scss'] , function(){ gulp.watch( dirLs.scss , ['scss'] ); });
