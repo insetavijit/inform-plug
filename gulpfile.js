@@ -20,7 +20,7 @@ var
         'js'        : 'asset/js/**/**.js',
         'typings'   : 'typings',
         'lib'       : 'lib',
-        'bin'       : 'bin',
+        'bin'       : '.bin',
         'curr'      : __dirname.split('/').slice(-1) 
     }
 ;
