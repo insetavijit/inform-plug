@@ -16,8 +16,10 @@ class BaseController
         return [
             'NAME' => $parts [ count($parts) - 2 ],
             'URL'=> $plugin_url ,
+
             /*used in 
                pages/Admin.php
+               CallBacks.php
             */'PATH'=> plugin_dir_path( dirname( __FILE__ , 2)),
 
             'MAINSLUG'=> 'ins_wp_plug',

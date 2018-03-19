@@ -50,12 +50,12 @@ class SettingsApi
     public function exicute()
     {
         foreach($this->pages as $page){
-            add_menu_page( 
+            add_menu_page(
                 $page['page_title'], 
                 $page['menu_title'], 
                 $page['capability'], 
                 $page['menu_slug'], 
-                array($this , 'callbask' ),
+                $page['callback'],
                 //optional args :
                 ($page['icon_url']) ? $page['icon_url'] : 'dashicons-admin-plugins',
                 ($page['position']) ? $page['position'] : null
@@ -64,20 +64,14 @@ class SettingsApi
         }
         // if their is no sub pages the loop will not be exicuted so chil
         foreach($this->subPages as $subPage){
-            add_submenu_page( 
+            add_submenu_page(
                 $subPage['parent_slug'],
                 $subPage['page_title'], 
                 $subPage['menu_title'], 
                 $subPage['capability'], 
-                $subPage['menu_slug'], 
-                array($this , 'callbask')
+                $subPage['menu_slug'],
+                $subPage['callback']
             );
         }
-    }
-    public function callbask( )
-    {
-        # code...
-        echo 'Hi' ;
-
     }
 }
