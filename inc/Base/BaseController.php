@@ -28,11 +28,10 @@ class BaseController
         ];
     }
 
-    public function slugs()
+    public function admin_slugs()
     {
         return 
-        [ #self explanatory 
-            'ADMIN_MENU_SLUG' => 'wt-plug-inset-admin-main-menu-area',
+        [ #self explanatory
             'ADMIN_MENU_TRASH_SLUG' => 'wt-plug-inset-trash-page',
             'ADMIN_MENU_DASHBOARD_SLUG' => 'wt-plug-inset-dashboard-page'
         ];

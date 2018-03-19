@@ -35,7 +35,7 @@ class LinkSettings extends BaseController
             # 1. The $links will be passed by wordpress .
             $links,
             # 2 . this is the link we are passing to wp to add in the plugin section 
-            '<a href="admin.php?page=ins_wp_plug"> Dashboard </a>' 
+            '<a href="admin.php?page='.$this->admin_slugs()['ADMIN_MENU_DASHBOARD_SLUG'].'"> Dashboard </a>' 
         );
         # 3 . at last returning the updated arry to wp - callback
         return $links ;

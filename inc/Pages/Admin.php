@@ -37,9 +37,9 @@ class Admin extends BaseController
             array
             ( ///> Creating the Dashboard main page entry  | this page will be used to create a sub page with same name 
                 'page_title'=> 'Dashboard', 
-                'menu_title'=> 'wt-seed', 
+                'menu_title'=> 'wt-plug', 
                 'capability'=> 'manage_options', 
-                'menu_slug' => 'wt_plug_main',
+                'menu_slug' => $this->admin_slugs()['ADMIN_MENU_DASHBOARD_SLUG'],
                 'callback'  => array( new Callbacks() , 'Dashboard' ),
                 'icon_url'  => ''
             )
@@ -50,11 +50,11 @@ class Admin extends BaseController
         $this->subpages = array(
             array
             (   ///> Creating the Trash  page entry 
-                'parent_slug' => 'wt_plug_main', 
-                'page_title' => 'Trash',
-                'menu_title' => 'trash',
+                'parent_slug' => $this->admin_slugs()['ADMIN_MENU_DASHBOARD_SLUG'], 
+                'page_title' => 'Trash - page ',
+                'menu_title' => 'Trash',
                 'capability' => 'manage_options', 
-                'menu_slug' => 'wt_plug_main_trash', 
+                'menu_slug' => $this->admin_slugs()['ADMIN_MENU_TRASH_SLUG'], 
                 'callback' => array( $this->calls , 'Trash' )
             ),
         );
