@@ -1,5 +1,5 @@
 /*\
-|| includeing requred files 
+|| including required files 
 ||
 \*/
 var 
@@ -58,7 +58,7 @@ gulp.task('scss', function() {
     .pipe(sourceMaps.write("./map"))
     .pipe(gulp.dest( dirLs.lib ))
 });
-///> typesctip compiling 
+///> typescript compiling 
 gulp.task('js', function() {
     gulp.src( dirLs.js )
     .pipe( plumber() )
@@ -75,7 +75,7 @@ gulp.task('js', function() {
 //> libs to move 
 gulp.task('sftLib', function() {
     gulp.src([//just un comment all to use them !!!
-        //> fremworks :
+        //> frameworks :
         './node_modules/bootstrap/dist/css/bootstrap.min.css',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
         //> icon - pack 

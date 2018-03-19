@@ -2,7 +2,7 @@
 /*| @package wt-plug | Deactivate */
 namespace Inc\Base ;
 /*|||||||||| date : 19-3-2018 ||||||
-    Aurthor : avijit sarkar
+    Author : avijit sarkar
     Version : 1.0.0
     UseCases: Run on Deactivate plugin
     Used on : only this page 

@@ -4,9 +4,9 @@
 /*| extend and uses |*/
     use Inc\Base\BaseController;
 /*|||||||||| date : 19-3-2018 ||||||
-    Aurthor : avijit sarkar
+    Author : avijit sarkar
     Version : 1.0.0
-    UseCases: add new link to wp plugin infor after active link
+    UseCases: add new link to wp plugin inform after active link
     Used on : only this page 
     comment : n/a
 */
@@ -21,9 +21,9 @@ class LinkSettings extends BaseController
             ( 
                 # 1. This is the hook
                 'plugin_action_links_' 
-                # 1 . Concating with the base name : ! remember ('concating') this is the firest line not secound
+                # 1 . Concating with the base name : ! remember ('concating') this is the first line not second
                 . $this->plug_info()['BASENAME'] 
-                # 2. the CallBack function | currnt page ( line 32 )
+                # 2. the CallBack function | currant page ( line 32 )
                 ,array( $this , 'settings_link')
             );
     }
@@ -35,7 +35,7 @@ class LinkSettings extends BaseController
             # 1. The $links will be passed by wordpress .
             $links,
             # 2 . this is the link we are passing to wp to add in the plugin section 
-            '<a href="admin.php?page=ins_wp_plug"> Dashbord </a>' 
+            '<a href="admin.php?page=ins_wp_plug"> Dashboard </a>' 
         );
         # 3 . at last returning the updated arry to wp - callback
         return $links ;

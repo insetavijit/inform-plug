@@ -1,0 +1,22 @@
+{
+    
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "gitlens.codeLens.enabled": false,
+/*| spell chalk acts |*/
+    "cSpell.ignorePaths": [
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/**",
+        ".vscode",
+        "typings",
+        "vendor",
+        "lib",
+        ".bin",
+    ],
+    "cSpell.words": [
+        "avijit",
+        "sarkar"
+    ]
+}

@@ -2,9 +2,9 @@
 /* | @package wt-plug || BaseController|*/
 namespace Inc\Base ;
 /*|||||||||| date : 19-3-2018 ||||||
-    Aurthor : avijit sarkar
+    Author : avijit sarkar
     Version : 1.0.0
-    UseCases: add new link to wp plugin infor after active link
+    UseCases: add new link to wp plugin inform after active link
     Used on : 
         1. Pages/**
         2. Settings/ callbacks.php
@@ -23,7 +23,7 @@ class BaseController
             'URL'=> $plugin_url ,
             # plugin url path ( for including files from the root of this plugin )
             'PATH'=> plugin_dir_path( dirname( __FILE__ , 2)),
-            # basefile url / name || ENTRY FILE FULL PATH
+            # base-file url / name || ENTRY FILE FULL PATH
             'BASENAME'=> INS_PLUGIN_BASENAME ,
         ];
     }
@@ -32,9 +32,9 @@ class BaseController
     {
         return 
         [ #self explanatory 
-            'ADMIN_MENU_SLUG' => 'wt-plug-inset-amdin-main-menu-area',
+            'ADMIN_MENU_SLUG' => 'wt-plug-inset-admin-main-menu-area',
             'ADMIN_MENU_TRASH_SLUG' => 'wt-plug-inset-trash-page',
-            'ADMIN_MENU_DASHBORD_SLUG' => 'wt-plug-inset-dashbord-page'
+            'ADMIN_MENU_DASHBOARD_SLUG' => 'wt-plug-inset-dashboard-page'
         ];
     }
 }

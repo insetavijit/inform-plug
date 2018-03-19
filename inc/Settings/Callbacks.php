@@ -4,7 +4,7 @@ namespace Inc\Settings;
 /*| extend and uses |*/
 use Inc\Base\BaseController ;
 /*|||||||||| date : 19-3-2018 ||||||
-    Aurthor : avijit sarkar
+    Author : avijit sarkar
     Version : 1.0.0
     UseCases: Listing all Callbacks
     Used on : only this page 
@@ -12,9 +12,9 @@ use Inc\Base\BaseController ;
 */
 class Callbacks extends BaseController
 {
-    public function Dashbord()
+    public function Dashboard()
     {
-        require_once( $this->plug_info()['PATH'] . '/templates/WellcomePage.php');
+        require_once( $this->plug_info()['PATH'] . '/templates/WelcomePage.php');
     }
     public function Trash()
     {

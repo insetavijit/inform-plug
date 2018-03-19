@@ -1,14 +1,14 @@
 <?php
-/*| @package wt-plug | PageGenarator */
+/*| @package wt-plug | PageGenerator */
 namespace Inc\Settings;
 /*|||||||||| date : 19-3-2018 ||||||
-    Aurthor : avijit sarkar
+    Author : avijit sarkar
     Version : 1.0.0
-    UseCases: Genarate Pages for Admin Pannel Entry
+    UseCases: Generate Pages for Admin Panned Entry
     Used on : only this page 
     comment : n/a
 */
-class PageGenarator
+class PageGenerator
 {
     /* [ listing all pages and subpages : ] */
     public $pages = array();
@@ -16,8 +16,8 @@ class PageGenarator
     ///> entry point
     public function register()
     {
-        /*| this is the default function to exicute everything | */
-        add_action( 'admin_menu',   array($this , 'exicute') );
+        /*| this is the default function to execute everything | */
+        add_action( 'admin_menu',   array($this , 'execute') );
     }
     public function addPages( array $page )
     {
@@ -32,12 +32,12 @@ class PageGenarator
         return $this;
     }
     public function withSubpage( string $title )
-    {#3. createing the main SubPage if asked for
-        // if no page is setted up . then how to genarate subpage of it ? so leave 
+    {#3. creating the main SubPage if asked for
+        // if no page is setting up . then how to generate subpage of it ? so leave 
         if ( empty( $this->pages) ) { return $this; }
-        // tecnical thing : we want to create the parrent page as a subpage acording to make it work like df setting->genaral page
+        // technical thing : we want to create the parent page as a subpage according to make it work like df setting->general page
         $main_page_entry = $this->pages[0];
-        // adding additional Main Subpage  : (  this is auto gen . no nedd to spacify in calling to create it but call the instance )
+        // adding additional Main Subpage  : (  this is auto gen . no need to specify in calling to create it but call the instance )
 		$subpage = array(
 			array(
 				'parent_slug' => $main_page_entry['menu_slug'], 
@@ -49,10 +49,10 @@ class PageGenarator
 			)
 		);
         $this->subPages = $subpage;
-        # 4 .  return hole object for methode buinding 
+        # 4 .  return hole object for methods building 
 		return $this;
     }
-    public function exicute()
+    public function execute()
     {
         foreach($this->pages as $page){
             add_menu_page(
@@ -67,7 +67,7 @@ class PageGenarator
                 
             );
         }
-        // if their is no sub pages the loop will not be exicuted so chil
+        // if their is no sub pages the loop will not be executed so chill
         foreach($this->subPages as $subPage){
             add_submenu_page(
                 $subPage['parent_slug'],
