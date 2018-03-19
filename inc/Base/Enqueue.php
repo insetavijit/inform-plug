@@ -1,14 +1,20 @@
 <?php 
-
+/*| @package wt-plug || Enqueue |*/
 namespace Inc\Base ;
-
+/*| extends and uses |*/
 use Inc\Base\BaseController;
+/*|||||||||| date : 19-3-2018 ||||||
+    Aurthor : avijit sarkar
+    Version : 1.0.0
+    UseCases: enque css and js
+    Used on : only this page 
+    comment : n/a
+*/
 
 class Enqueue extends BaseController 
 {
     public function register()
     {
-        # code...
         add_action (  'admin_enqueue_scripts',  array( $this , 'enqueue') );
     }
     public function enqueue( )

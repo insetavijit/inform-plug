@@ -1,13 +1,17 @@
 <?php 
-
+/*| @package wt-plug | Deactivate */
 namespace Inc\Base ;
-
-
+/*|||||||||| date : 19-3-2018 ||||||
+    Aurthor : avijit sarkar
+    Version : 1.0.0
+    UseCases: Run on Deactivate plugin
+    Used on : only this page 
+    comment : n/a
+*/
 class Deactivate
 {
     public function deactivate ( )
     {
-        # code...
         flush_rewrite_rules(  ) ;
     }
 }
