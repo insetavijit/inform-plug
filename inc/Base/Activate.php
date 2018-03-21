@@ -7,7 +7,7 @@
     Used on : only this page 
     comment : n/a
 */
-namespace Inc\Base ;
+namespace modules\Base ;
 class Activate
 {
     public function activate ( )

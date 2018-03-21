@@ -1,6 +1,6 @@
 <?php 
 /*| @package wt-plug | Deactivate */
-namespace Inc\Base ;
+namespace modules\Base ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0

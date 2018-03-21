@@ -31,7 +31,7 @@ gulp.task('tst' , function(){
 /************
  * postInstall . setup project 
 ************/
-gulp.task('resetANDflash' , [ 'ren' , 'all' ] );
+gulp.task('flash' , [ 'ren' , 'all' ] );
 
 /// short-hand methods
 gulp.task("all" , [ 'js' , 'scss' , 'sftLib' ]);

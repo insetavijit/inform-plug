@@ -1,6 +1,6 @@
 <?php
 /*| @package wt-plug | PageGenerator */
-namespace Inc\Settings;
+namespace modules\Settings;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0
@@ -21,13 +21,13 @@ class PageGenerator
     }
     public function addPages( array $page )
     {
-        # 1 . including the given page meta to the page create Queue
+        # 1 . modulesluding the given page meta to the page create Queue
         $this->pages = $page;
         return $this;
     }
     public function addSubPages( array $subPages )
     {
-        # 2 . including All given subpage meta to the page create Queue        
+        # 2 . modulesluding All given subpage meta to the page create Queue        
         $this->subPages = array_merge($this->subPages , $subPages);
         return $this;
     }

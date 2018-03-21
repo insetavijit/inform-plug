@@ -1,8 +1,8 @@
 <?php 
 /*| @package wt-plug || Enqueue |*/
-namespace Inc\Base ;
+namespace modules\Base ;
 /*| extends and uses |*/
-use Inc\Base\BaseController;
+use modules\Base\BaseController;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0

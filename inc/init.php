@@ -1,7 +1,7 @@
 <?php
 
 /*| @package wt-plug | Init */
- namespace Inc ;
+ namespace modules ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0

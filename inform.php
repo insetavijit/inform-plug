@@ -1,7 +1,7 @@
 <?php
 /*
-    Plugin Name: wt-plug
-    Plugin URI: https://github.com/insetavijit/wt-plug.git
+    Plugin Name: inform
+    Plugin URI: https://github.com/insetavijit/inform.git
     Description: A simple Clean minimalistc mordern wordpress plugin devlopment workfollow - seed 
     Version: 1.0.0
     Author: Avijit sarkar
@@ -19,25 +19,25 @@ if(file_exists( dirname( __FILE__ ) .'/vendor/autoload.php' )){
 define ( 'INS_PLUGIN_BASENAME' , plugin_basename( __FILE__ ));
 
 
-use Inc\Base\Activate ;
-use Inc\Base\Deactivate ;
+use modules\Base\Activate ;
+use modules\Base\Deactivate ;
 
 
-function wt_plug_activation (){
+function inform_form_support_activation (){
     Activate :: activate ();
 }
-function wt_plug_deactivation (){
+function inform_form_support_deactivation (){
     Deactivate :: deactivate ();
 }
 
 
-register_activation_hook    ( __FILE__ , 'wt_plug_activation' );
-register_deactivation_hook  ( __FILE__ , 'wt_plug_deactivation');
+register_activation_hook    ( __FILE__ , 'inform_form_support_activation' );
+register_deactivation_hook  ( __FILE__ , 'inform_form_support_deactivation');
 
 
 
 
-if( class_exists( 'Inc\\Init') ){
+if( class_exists( 'modules\\Init') ){
     Inc\init::register_services() ; 
     // echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestias.';
 }else{

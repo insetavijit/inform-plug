@@ -1,6 +1,6 @@
 <?php 
 /* | @package wt-plug || BaseController|*/
-namespace Inc\Base ;
+namespace modules\Base ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0
@@ -21,7 +21,7 @@ class BaseController
             'NAME' => $parts [ count($parts) - 2 ],
             # plugin Url
             'URL'=> $plugin_url ,
-            # plugin url path ( for including files from the root of this plugin )
+            # plugin url path ( for modulesluding files from the root of this plugin )
             'PATH'=> plugin_dir_path( dirname( __FILE__ , 2)),
             # base-file url / name || ENTRY FILE FULL PATH
             'BASENAME'=> INS_PLUGIN_BASENAME ,

@@ -1,22 +1,22 @@
 {
-  "name": "wp-plug",
+  "name": "inform",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp resetANDflash"
+    "postinstall": "gulp flash"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/insetavijit/wt-plug.git"
+    "url": "git+https://github.com/insetavijit/inform.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/insetavijit/wt-plug/issues"
+    "url": "https://github.com/insetavijit/inform/issues"
   },
-  "homepage": "https://github.com/insetavijit/wt-plug#readme",
+  "homepage": "https://github.com/insetavijit/inform#readme",
   "devDependencies": {
     "ansi-colors": "^1.1.0",
     "del": "^3.0.0",
