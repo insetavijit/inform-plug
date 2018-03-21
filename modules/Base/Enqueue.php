@@ -20,8 +20,8 @@ class Enqueue extends Config
     public function enqueue( )
     {
         # Css Files :
-        wp_enqueue_style    (   'mYstyle', $this->plug_info()['URL'] . '/lib/mYstyle.min.css' );
+        wp_enqueue_style    (   'mYstyle', $this->info['URL'] . '/lib/mYstyle.min.css' );
         # js files :
-    wp_enqueue_script (   'mYscript',  $this->plug_info()['URL'] . '/bin/mYscript.min.js', array( 'jquery' ), '' , true );
+    wp_enqueue_script (   'mYscript',  $this->info['URL'] . '/bin/mYscript.min.js', array( 'jquery' ), '' , true );
     }
 }

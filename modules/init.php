@@ -16,8 +16,8 @@
         # 1. listening  all the classes to use
         return [
             Pages\Admin :: class,
-            Base\LinkSettings :: class ,
             Base\Enqueue :: class ,
+            Settings\LinkSettings :: class
         ];
     }
     public static function register_services()

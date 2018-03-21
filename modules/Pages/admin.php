@@ -39,7 +39,7 @@ class Admin extends Config
                 'page_title'=> 'Dashboard', 
                 'menu_title'=> 'inform', 
                 'capability'=> 'manage_options', 
-                'menu_slug' => $this->admin_slugs()['ADMIN_MENU_DASHBOARD_SLUG'],
+                'menu_slug' => $this->slug['ADMIN_MENU_DASHBOARD_SLUG'],
                 'callback'  => array( new Callbacks() , 'Dashboard' ),
                 'icon_url'  => ''
             )
@@ -50,11 +50,11 @@ class Admin extends Config
         $this->subpages = array(
             array
             (   ///> Creating the Trash  page entry 
-                'parent_slug' => $this->admin_slugs()['ADMIN_MENU_DASHBOARD_SLUG'], 
+                'parent_slug' => $this->slug['ADMIN_MENU_DASHBOARD_SLUG'], 
                 'page_title' => 'Trash - page ',
                 'menu_title' => 'Trash',
                 'capability' => 'manage_options', 
-                'menu_slug' => $this->admin_slugs()['ADMIN_MENU_TRASH_SLUG'], 
+                'menu_slug' => $this->slug['ADMIN_MENU_TRASH_SLUG'], 
                 'callback' => array( $this->calls , 'Trash' )
             ),
         );
