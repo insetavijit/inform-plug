@@ -1,5 +1,5 @@
 {
-  "name": "inform",
+  "name": "inform-plug",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/insetavijit/inform.git"
+    "url": "git+https://github.com/insetavijit/inform-plug.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/insetavijit/inform/issues"
+    "url": "https://github.com/insetavijit/inform-plug/issues"
   },
-  "homepage": "https://github.com/insetavijit/inform#readme",
+  "homepage": "https://github.com/insetavijit/inform-plug#readme",
   "devDependencies": {
     "ansi-colors": "^1.1.0",
     "del": "^3.0.0",
