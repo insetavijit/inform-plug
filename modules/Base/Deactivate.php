@@ -1,5 +1,5 @@
 <?php 
-/*| @package wt-plug | Deactivate */
+/*| @package inform | Deactivate */
 namespace modules\Base ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar

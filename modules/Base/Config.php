@@ -1,5 +1,5 @@
 <?php 
-/* | @package wt-plug || BaseController|*/
+/* | @package inform || BaseController|*/
 namespace modules\Base ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
@@ -10,7 +10,7 @@ namespace modules\Base ;
         2. Settings/ callbacks.php
     comment : n/a
 */
-class BaseController
+class Config
 {
     public function plug_info()
     {
@@ -32,8 +32,8 @@ class BaseController
     {
         return 
         [ #self explanatory
-            'ADMIN_MENU_TRASH_SLUG' => 'wt-plug-inset-trash-page',
-            'ADMIN_MENU_DASHBOARD_SLUG' => 'wt-plug-inset-dashboard-page'
+            'ADMIN_MENU_TRASH_SLUG' => 'inform-inset-trash-page',
+            'ADMIN_MENU_DASHBOARD_SLUG' => 'inform-inset-dashboard-page'
         ];
     }
 }

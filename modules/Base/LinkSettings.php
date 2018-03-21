@@ -1,8 +1,8 @@
 <?php 
-/*| @package wt-plug | LinkSettings */
+/*| @package inform | LinkSettings */
     namespace modules\Base ;
 /*| extend and uses |*/
-    use modules\Base\BaseController;
+    use modules\Base\Config;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0
@@ -12,7 +12,7 @@
 */
 
 
-class LinkSettings extends BaseController
+class LinkSettings extends Config
 {
     public function register()
     {

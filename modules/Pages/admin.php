@@ -1,10 +1,10 @@
 <?php
-/*| @package wt-plug | Admin - entry point */
-namespace Inc\Pages ;
+/*| @package inform| Admin - entry point */
+namespace modules\Pages ;
 /*| extend and uses |*/
-use Inc\Base\BaseController ;
-use Inc\Settings\PageGenerator ;
-use Inc\Settings\Callbacks ;
+use modules\Base\Config ;
+use modules\Settings\PageGenerator ;
+use modules\Settings\Callbacks ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0
@@ -12,7 +12,7 @@ use Inc\Settings\Callbacks ;
     Used on : only this page 
     comment : n/a
 */
-class Admin extends BaseController
+class Admin extends Config
 {
     # declaring vars we will use them later
     public $subpages ;
@@ -37,7 +37,7 @@ class Admin extends BaseController
             array
             ( ///> Creating the Dashboard main page entry  | this page will be used to create a sub page with same name 
                 'page_title'=> 'Dashboard', 
-                'menu_title'=> 'wt-plug', 
+                'menu_title'=> 'inform', 
                 'capability'=> 'manage_options', 
                 'menu_slug' => $this->admin_slugs()['ADMIN_MENU_DASHBOARD_SLUG'],
                 'callback'  => array( new Callbacks() , 'Dashboard' ),

@@ -1,5 +1,5 @@
 <?php 
-/*| @package wt-plug | Activate
+/*| @package inform | Activate
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0

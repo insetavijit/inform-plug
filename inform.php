@@ -38,7 +38,7 @@ register_deactivation_hook  ( __FILE__ , 'inform_form_support_deactivation');
 
 
 if( class_exists( 'modules\\Init') ){
-    Inc\init::register_services() ; 
+    modules\Init::register_services() ; 
     // echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, molestias.';
 }else{
     // print_r( Inc );

@@ -1,5 +1,5 @@
 <?php 
-/*| @package wt-plug || Enqueue |*/
+/*| @package inform || Enqueue |*/
 namespace modules\Base ;
 /*| extends and uses |*/
 use modules\Base\BaseController;
@@ -11,7 +11,7 @@ use modules\Base\BaseController;
     comment : n/a
 */
 
-class Enqueue extends BaseController 
+class Enqueue extends Config 
 {
     public function register()
     {

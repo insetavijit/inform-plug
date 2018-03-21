@@ -1,5 +1,5 @@
 <?php
-/*| @package wt-plug | PageGenerator */
+/*| @package inform | PageGenerator */
 namespace modules\Settings;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar

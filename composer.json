@@ -1,5 +1,5 @@
 {
-    "name": "root/wt-plug",
+    "name": "root/inform",
     "description": "A simple Clean minimalistc mordern wordpress plugin devlopment workfollow - seed",
     "type": "project",
     "license": "GPL-3.0",
@@ -12,6 +12,6 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
-        "psr-4": {"modules\\": "./inc"}
+        "psr-4": {"modules\\": "./modules"}
     }
 }

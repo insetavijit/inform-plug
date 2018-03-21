@@ -1,8 +1,8 @@
 <?php
-/*| @package wt-plug | LinkSettings */
+/*| @package inform | LinkSettings */
 namespace modules\Settings;
 /*| extend and uses |*/
-use modules\Base\BaseController ;
+use modules\Base\Config ;
 /*|||||||||| date : 19-3-2018 ||||||
     Author : avijit sarkar
     Version : 1.0.0
@@ -10,7 +10,7 @@ use modules\Base\BaseController ;
     Used on : only this page 
     comment : n/a
 */
-class Callbacks extends BaseController
+class Callbacks extends Config
 {
     public function Dashboard()
     {
