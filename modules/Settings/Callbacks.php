@@ -14,10 +14,10 @@ class Callbacks extends Config
 {
     public function Dashboard()
     {
-        require_once( $this->plug_info()['PATH'] . '/templates/WelcomePage.php');
+        require_once( $this->info['PATH'] . '/templates/WelcomePage.php');
     }
     public function Trash()
     {
-        require_once( $this->plug_info()['PATH'] . '/templates/ShowTrash.php');
+        require_once( $this->info['PATH'] . '/templates/ShowTrash.php');
     }
 }

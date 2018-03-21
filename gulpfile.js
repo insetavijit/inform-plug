@@ -44,8 +44,6 @@ gulp.task("scss-w" , ['scss'] , function(){ gulp.watch( dirLs.scss , ['scss'] );
 gulp.task("js-w" , ['js'] , function(){ gulp.watch( dirLs.js , ['js'] ); });
 
 
-
-
 ///> scss 
 gulp.task('scss', function() {
     gulp.src(dirLs.scss)
@@ -114,17 +112,17 @@ gulp.task('zip', () => {
 
 });
 // gulp.task( 'build' , );
-gulp.task('clean', function(){
+gulp.task('clear', function(){
     return del( [
         dirLs.bin + '/**/*',
         dirLs.lib + '/**/*'
     ] , {force:true});
 });
 gulp.task('setPluginName' , ()=>{
-    gulp.src('wt-plug.php')
+    gulp.src('inform.php')
     .pipe(rename(dirLs.curr + '.php'))
     .pipe(gulp.dest('.'))
 });
 gulp.task('delWPPlug' , ()=>{
-    return del(['wt-plug.php']);
+    return del(['inform.php']);
 });
